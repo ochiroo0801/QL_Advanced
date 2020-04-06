@@ -1,0 +1,202 @@
+/* Footer ********************************************************/
+.footer {
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto 80px;
+  width: 100%;
+  background: rgb(46, 46, 46);
+  position: relative;
+
+  @mixin atMedium {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 300px 50px;
+  }
+
+  &-logo {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    height: 200px;
+
+    @mixin atMedium {
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
+      height: 100%;
+    }
+
+    img {
+      min-width: 90px;
+      max-width: 90px;
+    }
+
+    &__text {
+      h3 {
+        color: white;
+        font-size: 1.5rem;
+      }
+
+      p {
+        color: #fab733;
+        letter-spacing: 6px;
+      }
+    }
+  }
+
+  &-message {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 1px solid #797979;
+    border-bottom: 1px solid #797979;
+
+    @mixin atMedium {
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 1;
+      height: 100%;
+      border: none;
+      border-left: 1px solid #797979;
+      border-right: 1px solid #797979;
+    }
+
+    h3 {
+      color: white;
+      font-weight: 700;
+
+      span {
+        color: #fab733;
+      }
+    }
+
+    .messege {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+
+      #name {
+        margin-bottom: 15px;
+        padding-left: 15px;
+        height: 40px;
+        border-radius: 10px;
+        outline: none;
+      }
+
+      #messege {
+        margin-bottom: 15px;
+        padding-left: 15px;
+        min-height: 40px;
+        max-height: 120px;
+        border-radius: 10px;
+        outline: none;
+      }
+    }
+    button {
+      width: 60%;
+      height: 40px;
+      border-radius: 10px;
+      outline: none;
+      border: none;
+      background: #fab733;
+    }
+  }
+
+  &-contact {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @mixin atMedium {
+      grid-column: 3 / span 1;
+      grid-row: 1 / span 1;
+      height: 100%;
+    }
+
+    h3 {
+      color: white;
+      font-weight: 700;
+
+      span {
+        color: #fab733;
+      }
+    }
+
+    .utas {
+      display: flex;
+      flex-direction: column;
+      color: white;
+
+      div {
+        margin: 5px 0;
+
+        i {
+          color: #fab733;
+          padding-right: 10px;
+        }
+      }
+    }
+
+    .social {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      font-size: 1.2rem;
+
+      i {
+        color: #fab733;
+        margin: 10px 20px;
+      }
+    }
+  }
+
+  &__copy {
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+    background: black;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    @mixin atMedium {
+      grid-column: 1 / span 3;
+      grid-row: 2 / span 1;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    &--p {
+      color: gray;
+    }
+
+    &--a {
+      color: white;
+      text-decoration: none;
+      padding-left: 10px;
+
+      span {
+        color: #fab733;
+      }
+    }
+  }
+}

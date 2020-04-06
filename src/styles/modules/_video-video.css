@@ -1,0 +1,101 @@
+/* Видео сан ****************************************************/
+
+.video-container {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+  padding: 0px 20px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 50px;
+
+  @mixin atSmall {
+    padding: 0px 50px;
+  }
+
+  h3 {
+    font-size: 30px;
+    margin: 30px 0 10px 0;
+    border-bottom: 2px solid #fab733;
+    padding: 20px 0px;
+    margin-bottom: 20px;
+    color: #fab733;
+    font-weight: 600;
+  }
+  .darkH3 {
+    color: black;
+    border-bottom: 2px solid black;
+  }
+  .video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-gap: 20px;
+  }
+
+  .video {
+    cursor: pointer;
+    height: 180px;
+    line-height: 50px;
+    text-align: center;
+    background: darkcyan;
+    padding: 60px;
+    border: 1px solid #333;
+    background: center top/cover;
+    border-radius: 5px;
+    transition: 0.3s linear;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    i {
+      font-size: 50px;
+      color: $mainOrange;
+    }
+  }
+
+  .btn {
+    display: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: none;
+    color: black;
+    margin-top: 40px;
+    cursor: pointer;
+    background-color: #e6e6e6;
+    width: 250px;
+    height: 60px;
+    box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.774);
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s linear;
+    outline: none;
+    position: relative;
+
+    &:hover {
+      background: #fab733;
+      box-shadow: inset 3px 3px 5px #684601;
+      color: black;
+    }
+
+    i {
+      position: absolute;
+      top: 15px;
+      left: 30px;
+      font-size: 2rem;
+      color: #fa0004;
+      text-shadow: 1px 0 2px black;
+    }
+    h6 {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+  }
+
+  .btnActive {
+    background: black;
+    color: white;
+  }
+}

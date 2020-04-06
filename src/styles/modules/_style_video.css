@@ -1,0 +1,66 @@
+@import "../modules/_video-video.css";
+@import "../modules/_video-footer.css";
+
+.videoBody {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  background-image: $Bg_Gradient;
+}
+
+.videoBodyActive {
+  overflow: hidden;
+}
+
+/* Back-Top */
+.backTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  width: 60px;
+  height: 60px;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+  text-decoration: none !important;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $mainOrange;
+    width: 80px;
+    height: 80px;
+    z-index: -1;
+    border-radius: 50%;
+    animation: top 2s ease-out infinite;
+  }
+
+  i {
+    background-color: $mainWhite;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: $mainOrange;
+    padding: 14px 16px;
+  }
+
+  &.active {
+    pointer-events: auto;
+    opacity: 1;
+    z-index: 999;
+  }
+
+  @keyframes top {
+    0% {
+      transform: scale(0.6);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.1);
+    }
+  }
+}
