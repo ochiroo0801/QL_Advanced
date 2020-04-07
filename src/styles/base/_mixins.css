@@ -18,3 +18,10 @@
     @mixin-content;
   }
 }
+
+/* Height ******************************************************/
+@define-mixin atSmallHeight {
+  @media (min-height: 415px) {
+    @mixin-content;
+  }
+}
