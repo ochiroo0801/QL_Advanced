@@ -10,13 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let prevBtn = document.getElementById("prev");
   let nextBtn = document.getElementById("next");
   let indices = document.querySelectorAll(".index");
-  let bgImgIndex = document.querySelectorAll(".bgImgIndex");
 
-  let currentBg = 0;
   let currentIndex = 0;
-
-  bgImgIndex.forEach((index) => index.classList.remove("activeChange"));
-  bgImgIndex[currentBg].classList.add("activeChange");
 
   indices.forEach((index) => index.classList.remove("active"));
   indices[currentIndex].classList.add("active");
@@ -26,12 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
     currentIndex = (currentIndex + 1) % 4;
     indices.forEach((index) => index.classList.remove("active"));
     indices[currentIndex].classList.add("active");
-
-    let prevBg = currentBg;
-    currentBg = (currentBg + 1) % 4;
-    bgImgIndex.forEach((index) => index.classList.remove("activeChange"));
-    bgImgIndex[currentBg].classList.add("activeChange");
-
     showTextAnimation("next");
   }
 
@@ -39,11 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
     currentIndex = currentIndex - 1 < 0 ? 3 : currentIndex - 1;
     indices.forEach((index) => index.classList.remove("active"));
     indices[currentIndex].classList.add("active");
-
-    currentBg = currentBg - 1 < 0 ? 3 : currentBg - 1;
-    bgImgIndex.forEach((index) => index.classList.remove("activeChange"));
-    bgImgIndex[currentBg].classList.add("activeChange");
-
     showTextAnimation("prev");
   }
 
