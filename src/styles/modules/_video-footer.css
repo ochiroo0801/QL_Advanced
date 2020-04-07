@@ -73,6 +73,7 @@
     }
 
     h3 {
+      font-size: 1.5rem;
       color: white;
       font-weight: 700;
 
@@ -130,6 +131,7 @@
     }
 
     h3 {
+      font-size: 1.5rem;
       color: white;
       font-weight: 700;
 
@@ -162,6 +164,7 @@
       font-size: 1.2rem;
 
       i {
+        font-size: 1.5rem;
         color: #fab733;
         margin: 10px 20px;
       }
@@ -185,11 +188,11 @@
       justify-content: center;
     }
 
-    &--p {
+    p {
       color: gray;
     }
 
-    &--a {
+    a {
       color: white;
       text-decoration: none;
       padding-left: 10px;

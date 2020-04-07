@@ -1,0 +1,233 @@
+.bodyContact {
+  width: 100vw;
+  height: 100vh;
+  background: $homePageBg;
+  overflow: hidden;
+}
+
+.contact__container-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  .contact__container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
+    position: relative;
+    overflow: hidden;
+    /* width: 768px; */
+    width: 1100px;
+    min-width: auto;
+    max-width: 100%;
+    /* height: 60vh; */
+    min-height: 480px;
+    animation: contact 1s ease-in 0.4s backwards;
+
+    .form-container {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      transition: all 0.6s ease-in-out;
+
+      form {
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        padding: 0 50px;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h1 {
+          margin-bottom: 50px;
+          border-bottom: 1px solid #fab733;
+          padding-bottom: 15px;
+        }
+
+        p {
+          line-height: 30px;
+        }
+
+        .social-container {
+          .i {
+            padding: 10px 0;
+            i {
+              font-size: 1.2rem;
+              color: $mainOrange;
+            }
+          }
+          a {
+            i {
+              font-size: 40px;
+              transition: 0.3s ease;
+              animation: facebook-contact 5s linear infinite;
+            }
+            i:hover {
+              transform: scale(1.1) translateY(-5px);
+              color: $mainYellow;
+            }
+          }
+        }
+      }
+    }
+
+    @keyframes facebook-contact {
+      0% {
+        transform: translateY(0) rotate(720deg);
+      }
+      20% {
+        transform: translateY(-10px) rotate(720deg);
+      }
+      30% {
+        transform: translateY(-10px) rotate(0);
+      }
+      40% {
+        transform: translateY(2px);
+      }
+      42% {
+        transform: translateY(-5px);
+      }
+      44% {
+        transform: translateY(0px);
+      }
+      60% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  }
+  @keyframes contact {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+button {
+  border-radius: 20px;
+  border: 1px solid #fa0004;
+  background: #fa0004;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  transition: transform 80ms ease-in;
+  margin-top: 50px;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:focus {
+  outline: none;
+}
+
+button.ghost {
+  background: transparent;
+  border-color: #fff;
+}
+
+.sign-in-container {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+.sign-up-container {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 6;
+
+  .overlay {
+    background: #fab733;
+    background: linear-gradient(to right, #fab733, #fa0004) no-repeat 0 0 /
+      cover;
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+
+    .overlay-panel {
+      position: absolute;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+      height: 100%;
+      width: 50%;
+      text-align: center;
+      transform: translateX(0);
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .overlay-right {
+      right: 0;
+      transform: translateX(0);
+    }
+    .overlay-left {
+      transform: translateX(-20%);
+    }
+  }
+}
+
+/* Animation */
+
+/* Utsaar holbogdoh heseg Baruun tiish */
+.contact__container.right-panel-active .sign-in-container {
+  transform: translateX(100%);
+}
+
+/* Social-r holbogdoh OverLay Zuun tiish */
+.contact__container.right-panel-active .overlay-container {
+  transform: translateX(-100%);
+}
+
+/* Social-r holbogdoh heseg Baruun tiish il garah */
+.contact__container.right-panel-active .sign-up-container {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+}
+
+.contact__container.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.contact__container.right-panel-active .overlay-left {
+  transform: translateX(0);
+}
+.contact__container.right-panel-active .overlay-right {
+  transform: translateX(20%);
+}

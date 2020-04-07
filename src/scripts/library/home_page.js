@@ -1,6 +1,4 @@
-slide();
-
-function slide() {
+document.addEventListener("DOMContentLoaded", () => {
   new Glide(".glide", {
     type: "carousel",
     startAt: 0,
@@ -81,4 +79,4 @@ function slide() {
       });
     });
   }
-}
+});

@@ -3,7 +3,93 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/6c6a960725.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Document</title>
   </head>
-  <body></body>
+  <body class="bodyContact">
+    <nav class="nav">
+      <div class="nav_logo">
+        <img src="./img/Mr.QL_Avatar_dot.png" alt="" />
+      </div>
+      <div class="nav_toggle">
+        <span class="span s1"></span>
+        <span class="span s2"></span>
+        <span class="span s3"></span>
+      </div>
+      <div class="nav__container">
+        <ul class="nav__container--ul">
+          <li><a href="index.html">Нүүр</a></li>
+          <li><a href="video.html">Видео</a></li>
+          <li><a href="contact.html">Холбогдох</a></li>
+        </ul>
+        <div class="nav__container--social">
+          <a
+            href="https://www.facebook.com/Mr.QualityLyricsMongolia/"
+            target="blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a
+            href="https://www.youtube.com/channel/UCDNCaXyaX_ylW4OkdL_vF-Q?sub_confirmation=1"
+            target="blank"
+            ><i class="fab fa-youtube"></i
+          ></a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="contact__container-wrap">
+      <div class="contact__container" id="contact__container">
+        <div class="form-container sign-up-container">
+          <form action="#">
+            <h1>Сошиал-р холбогдох</h1>
+            <div class="social-container">
+              <a
+                href="https://www.facebook.com/Mr.QualityLyricsMongolia/"
+                target="blank"
+                ><i class="fab fa-facebook"></i
+              ></a>
+            </div>
+          </form>
+        </div>
+        <div class="form-container sign-in-container">
+          <form action="#">
+            <h1>Утсаар холбогдох</h1>
+            <div class="social-container">
+              <div class="i">
+                <i class="fas fa-mobile-alt"></i> +420 776 755 390 (CZ)
+              </div>
+              <div class="i">
+                <i class="fas fa-phone-alt"></i> +976 77 85 08 01 (MN)
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="overlay-container">
+          <div class="overlay">
+            <div class="overlay-panel overlay-left">
+              <h1>Утсаар холбогдох</h1>
+              <p>
+                Та бидэнтэй Утсаар холбогдохыг хүсвэл доорх товчин дээр дарж
+                Утасны дугаар харна уу...
+              </p>
+              <button class="ghost" id="phone-btn">ХОЛБООС СОЛИХ</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+              <h1>Фэйсбүүк-р холбогдох</h1>
+              <p>
+                Та бидэнтэй Фэйсбүүк-р холбогдохыг хүсвэл доорх товчин дээр дарж
+                Сошиал холбоосыг харна уу...
+              </p>
+              <button class="ghost" id="social-btn">ХОЛБООС СОЛИХ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Өөрийн JavaScript -->
+    <script src="bundled.js"></script>
+  </body>
 </html>

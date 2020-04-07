@@ -1,5 +1,6 @@
 // Scroll To Top
 const toTop = document.querySelector(".backTop");
+
 window.addEventListener("scroll", () => {
   if (window.pageYOffset > 400) {
     toTop.classList.add("active");
@@ -7,5 +8,3 @@ window.addEventListener("scroll", () => {
     toTop.classList.remove("active");
   }
 });
-
-export default toTop;

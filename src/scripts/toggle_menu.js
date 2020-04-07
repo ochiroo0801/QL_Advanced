@@ -13,5 +13,3 @@ toggle.addEventListener("click", () => {
 toggle.addEventListener("click", () => {
   videoBody.classList.toggle("videoBodyActive");
 });
-
-export default toggle;
