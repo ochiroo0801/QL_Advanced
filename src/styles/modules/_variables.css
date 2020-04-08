@@ -4,7 +4,7 @@ $mainGrey: #797979;
 $mainLightGrey: #afbad3;
 $mainBlack: #030303;
 $mainWhite: #fff;
-$backOutEase: ease-in-out;
+$backOutEase: cubic-bezier(0.68, -0.55, 0.27, 1.55);
 $Bg_Gradient: linear-gradient(
     116deg,
     rgba(232, 232, 232, 0.03) 0%,
