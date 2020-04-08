@@ -9,7 +9,5 @@ toggle.addEventListener("click", () => {
   nav__container.classList.toggle("change");
   content.classList.toggle("content_a");
   indicator.classList.toggle("indicator_a");
-});
-toggle.addEventListener("click", () => {
   videoBody.classList.toggle("videoBodyActive");
 });
