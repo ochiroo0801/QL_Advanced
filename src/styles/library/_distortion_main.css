@@ -376,7 +376,7 @@
     width: 120px;
     transition: 0.8s $backOutEase;
   }
-  .indicator_a {
+  .indicatorA {
     top: 100%;
   }
   .nav {
@@ -478,7 +478,7 @@
     overflow: hidden;
     transition: 0.9s $backOutEase;
   }
-  .content_a {
+  .contentA {
     top: 100%;
   }
   .controls {

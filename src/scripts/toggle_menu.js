@@ -10,8 +10,8 @@ toggle.addEventListener("click", () => {
 
   if (null === content) {
   } else {
-    content.classList.toggle("content_a");
-    indicator.classList.toggle("indicator_a");
+    content.classList.toggle("contentA");
+    indicator.classList.toggle("indicatorA");
   }
 
   if (null === videoBody) {
