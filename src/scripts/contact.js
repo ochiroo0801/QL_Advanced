@@ -1,10 +1,20 @@
 const socialBtn = document.getElementById("social-btn");
 const phoneBtn = document.getElementById("phone-btn");
-const contactContainer = document.getElementById("contact__container");
+const contactContainer = document.querySelector(".contact__container");
 
-socialBtn.addEventListener("click", () => {
-  contactContainer.classList.add("right-panel-active");
-});
-phoneBtn.addEventListener("click", () => {
-  contactContainer.classList.remove("right-panel-active");
-});
+const contactPageEvent = () => {
+  if (null === socialBtn) {
+  } else {
+    socialBtn.addEventListener("click", () => {
+      contactContainer.classList.add("right-panel-active");
+    });
+  }
+  if (null === phoneBtn) {
+  } else {
+    phoneBtn.addEventListener("click", () => {
+      contactContainer.classList.remove("right-panel-active");
+    });
+  }
+};
+
+contactPageEvent();

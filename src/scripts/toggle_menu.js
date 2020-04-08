@@ -7,7 +7,17 @@ const videoBody = document.querySelector(".videoBody");
 toggle.addEventListener("click", () => {
   toggle.classList.toggle("active");
   nav__container.classList.toggle("change");
-  content.classList.toggle("content_a");
-  indicator.classList.toggle("indicator_a");
-  videoBody.classList.toggle("videoBodyActive");
+
+  if (null === content) {
+  } else {
+    content.classList.toggle("content_a");
+    indicator.classList.toggle("indicator_a");
+  }
+
+  if (null === videoBody) {
+  } else {
+    videoBody.classList.toggle("videoBodyActive");
+  }
 });
+
+export default toggle;
