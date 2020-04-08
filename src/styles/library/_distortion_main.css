@@ -423,7 +423,7 @@
       justify-content: space-evenly;
       width: 100%;
       height: 100%;
-      background-image: $Bg_Gradient-2;
+      background: red;
       position: absolute;
       transition: 0.9s $backOutEase;
 
