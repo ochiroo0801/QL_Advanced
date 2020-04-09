@@ -1,31 +1,7 @@
 .body {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
   background: $homePageBg;
-}
-
-.background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  z-index: -1;
-
-  .bgImgIndex {
-    width: 100%;
-    height: 100%;
-    display: none;
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .activeChange {
-    display: block;
-  }
 }
 
 .nav {
@@ -37,37 +13,111 @@
   z-index: 999;
 
   &_toggle {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 40px;
+    z-index: 999;
+    border-radius: 5px;
+    border: 1px solid $mainOrange;
+    padding: 4px;
+    background: rgba(175, 186, 211, 0.6);
+    cursor: pointer;
+
+    @mixin atMedium {
+      display: none;
+    }
+
+    .span {
+      width: 100%;
+      height: 6px;
+      background: $mainOrange;
+      transition: 0.7s $backOutEase;
+    }
+  }
+
+  .active {
+    background: rgba(0, 20, 66, 0.6);
+
+    .s1 {
+      transform: rotate(-405deg) translate(-8px, 9px);
+    }
+    .s2 {
+      opacity: 0;
+    }
+    .s3 {
+      transform: rotate(405deg) translate(-8px, -9px);
+    }
   }
 
   &_logo {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     z-index: 888;
 
-    img {
+    @mixin atMedium {
       width: 80px;
       height: 80px;
+    }
+    img {
+      width: 60px;
+      height: 60px;
+
+      @mixin atMedium {
+        width: 80px;
+        height: 80px;
+      }
     }
   }
 
   &__container {
-    width: 500px;
-    height: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    background-image: $Bg_Gradient-2;
+    position: absolute;
+    transition: top 0.9s $backOutEase;
     z-index: 777;
 
-    &--ul {
-      width: 350px;
-      display: flex;
+    @mixin atMedium {
+      flex-direction: row;
       justify-content: space-between;
+      position: relative;
+      top: 0;
+      background-image: none;
+      width: 500px;
+      height: 100%;
+    }
+
+    &--ul {
+      padding-top: 150px;
+      width: 100%;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      @mixin atMedium {
+        padding-top: 0;
+        height: 100%;
+        width: 350px;
+        flex-direction: row;
+      }
 
       li {
-        font-size: 1rem;
+        font-size: 1.5rem;
         letter-spacing: 3px;
         cursor: pointer;
+
+        @mixin atMedium {
+          font-size: 1rem;
+        }
 
         a {
           color: $mainWhite;
@@ -75,16 +125,26 @@
         }
       }
     }
+
     &--social {
-      width: 150px;
-      height: 100%;
+      width: 50%;
+      height: 30%;
       display: flex;
       justify-content: space-around;
       align-items: center;
 
+      @mixin atMedium {
+        width: 150px;
+        height: 100%;
+      }
+
       a {
-        font-size: 1.6rem;
         color: $mainLightGrey;
+        font-size: 2rem;
+
+        @mixin atMedium {
+          font-size: 1.6rem;
+        }
 
         &:hover {
           color: white;
@@ -92,19 +152,36 @@
       }
     }
   }
+  .change {
+    top: 0;
+  }
 }
 
 .side-indicator {
   height: 70%;
+  width: 80px;
   top: 15%;
   left: 0;
-  width: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: absolute;
   justify-content: space-evenly;
+  transition: top 0.8s $backOutEase;
   cursor: pointer;
+
+  @mixin atSmall {
+    width: 150px;
+  }
+  @mixin atMedium {
+    width: 200px;
+  }
+  @mixin atFull {
+    width: 250px;
+  }
+  @mixin atFullest {
+    width: 300px;
+  }
 
   .line {
     position: absolute;
@@ -141,372 +218,290 @@
     }
   }
 }
+.indicatorA {
+  top: 100%;
+}
 
 .content {
   position: absolute;
   top: 0;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.text-wrapper {
-  width: 60%;
-}
-
-.text {
-  padding-left: 300px;
-  padding-right: 100px;
-}
-
-#title {
-  overflow: hidden;
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-bottom: 20px;
-}
-
-.text h4 {
-  font-size: 120px;
-  padding-bottom: 40px;
-  color: $mainWhite;
-  position: relative;
-}
-
-.btn {
-  width: 150px;
-  background-color: $mainOrange;
-  display: flex;
-  align-items: center;
-  padding: 10px 10px;
-  border-radius: 8px;
-  margin-top: 60px;
-  justify-content: space-around;
-  cursor: pointer;
-}
-
-.btn p {
-  color: white;
-  font-size: 18px;
-}
-
-.btn i {
-  padding-left: 10px;
-  color: white;
-}
-
-.glide {
-  width: 40%;
-}
-
-.glide_cover {
-  position: absolute;
-  width: 100%;
   height: 100%;
-  background-color: transparent;
-  z-index: 1;
-  cursor: default;
-}
-
-.slide {
-  height: 500px;
-  width: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-right: 40px;
-  flex-shrink: 0;
-}
-
-.slider-image {
-  height: 300px;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-  transition: all 0.5s;
-}
-
-.glide__slide--active .slider-image {
-  height: 400px;
-  z-index: 5;
-}
-
-.slider-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.slide p {
-  color: white;
-  font-size: 14px;
-}
-
-.rating {
-  display: flex;
-  width: 60px;
-  padding: 8px 0;
-  justify-content: space-between;
-}
-
-.circle {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: white;
-  opacity: 0.5;
-}
-
-.active {
-  opacity: 1;
-}
-
-.controls {
-  width: 140px;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  top: 50px;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.controls div {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0.7;
-  transition: all 0.5s;
-}
+  flex-direction: column;
+  overflow: hidden;
+  transition: top 0.9s $backOutEase;
 
-.controls div:active {
-  transform: scale(0.6);
-}
+  @mixin atFull {
+    flex-direction: row;
+  }
 
-.controls i {
-  color: gray;
-  font-size: 1.2rem;
-}
-/* Media query MAX-WIDTH ****************************************/
-@media only screen and (max-width: 1600px) {
-  .side-indicator {
-    width: 200px;
-  }
-  .text-wrapper {
-    width: 50%;
-  }
-  .glide {
-    width: 50%;
-  }
-  #title {
-    width: 440px;
-  }
-  .text {
-    padding-left: 200px;
-  }
-  .text h4 {
-    transform: scale(0.8);
-    transform-origin: left;
-  }
-  .btn {
-    width: 120px;
-  }
-  .btn p {
-    font-size: 14px;
-  }
-}
-
-@media only screen and (max-width: 1300px) {
-  .text h4 {
-    transform: scale(0.6);
-    transform-origin: left;
-  }
-  .slide {
-    height: 400px;
-    width: 220px;
-  }
-}
-
-@media only screen and (max-width: 1100px) {
-  .side-indicator {
-    width: 120px;
-  }
-  .text {
-    padding-left: 120px;
-  }
-  .content {
-    flex-direction: column;
-  }
   .text-wrapper {
     width: 100%;
-  }
-  .glide {
-    width: 100%;
-    padding-left: 120px;
-    padding-top: 40px;
-  }
-  .btn {
-    margin-top: 30px;
-  }
-  .controls {
-    top: -20px;
-  }
-  .slide {
-    height: 500px;
-    width: 300px;
-    padding-bottom: 0;
-  }
-  .slider-image {
-    height: 280px;
-  }
-  .slide p {
-    font-size: 12px;
-  }
-}
-@media only screen and (max-width: 800px) {
-  .side-indicator {
-    width: 120px;
-    transition: 0.8s $backOutEase;
-  }
-  .indicatorA {
-    top: 100%;
-  }
-  .nav {
-    &_toggle {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 40px;
-      height: 40px;
-      z-index: 999;
-      border-radius: 5px;
-      border: 1px solid $mainOrange;
-      padding: 4px;
-      background: rgba(175, 186, 211, 0.6);
-      cursor: pointer;
+    margin-bottom: 30px;
 
-      .span {
-        width: 100%;
-        height: 6px;
-        background: $mainOrange;
-        transition: 0.7s $backOutEase;
+    @mixin atLarge {
+      margin-bottom: 50px;
+      width: 50%;
+    }
+    @mixin atFull {
+      margin-bottom: 0;
+    }
+
+    .text {
+      padding-left: 120px;
+      padding-right: 100px;
+      @mixin atMedium {
+        padding-left: 250px;
       }
-    }
-    .active {
-      background: rgba(0, 20, 66, 0.6);
-    }
+      @mixin atLarge {
+        padding-left: 0px;
+      }
+      @mixin atFull {
+        padding-left: 180px;
+      }
+      @mixin atFullest {
+        padding-left: 200px;
+      }
 
-    .active .s1 {
-      transform: rotate(-405deg) translate(-8px, 9px);
-    }
-
-    .active .s2 {
-      opacity: 0;
-    }
-
-    .active .s3 {
-      transform: rotate(405deg) translate(-8px, -9px);
-    }
-    .nav__container {
-      top: -100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-      width: 100%;
-      height: 100%;
-      background-image: $Bg_Gradient-2;
-      position: absolute;
-      transition: 0.9s $backOutEase;
-
-      &--ul {
-        padding-top: 150px;
-        width: 100%;
-        height: 70%;
+      #title {
+        overflow: hidden;
+        width: 220px;
+        height: 120px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        li {
-          font-size: 1.5rem;
-          a {
-            color: $mainWhite;
-            font-weight: 700;
+        justify-content: flex-start;
+        margin-bottom: 0;
+        position: relative;
+
+        @mixin atSmall {
+          height: 150px;
+          width: 300px;
+          margin-bottom: 20px;
+        }
+        @mixin atLarge {
+          width: 440px;
+        }
+        @mixin atFull {
+          width: 500px;
+        }
+
+        h4 {
+          font-size: 120px;
+          padding-bottom: 40px;
+          color: $mainWhite;
+          position: relative;
+          transform-origin: left;
+          transform: scale(0.35);
+
+          @mixin atSmall {
+            transform: scale(0.6);
+          }
+          @mixin atLarge {
+            transform: scale(0.8);
+          }
+          @mixin atFull {
+            transform: scale(1);
           }
         }
       }
 
-      &--social {
-        width: 50%;
-        height: 30%;
+      .btn {
+        width: 120px;
+        background-color: $mainOrange;
+        display: flex;
+        align-items: center;
+        padding: 10px 10px;
+        border-radius: 8px;
+        margin-top: 10px;
+        justify-content: space-around;
+        cursor: pointer;
 
-        a {
-          color: $mainLightGrey;
-          font-size: 2rem;
+        @mixin atMedium {
+          margin-top: 30px;
+          width: 150px;
+        }
+        @mixin atFull {
+          width: 180px;
+          margin-top: 60px;
+        }
+
+        p {
+          color: white;
+          font-size: 14px;
+
+          @mixin atMedium {
+            font-size: 18px;
+          }
+        }
+
+        i {
+          padding-left: 10px;
+          color: white;
         }
       }
     }
-    .change {
+  }
+
+  .glide {
+    width: 130%;
+    padding-left: 150px;
+
+    @mixin atSmall {
+      width: 100%;
+    }
+    @mixin atMedium {
+      width: 100%;
+      padding-left: 250px;
+    }
+    @mixin atLarge {
+      padding-left: 300px;
+    }
+    @mixin atFull {
+      padding-left: 20px;
+      width: 50%;
+    }
+    @mixin atFullest {
+      width: 50%;
+    }
+
+    .glide_cover {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      z-index: 1;
+      cursor: default;
+    }
+
+    .controls {
+      width: 140px;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
       top: 0;
+      cursor: pointer;
+      z-index: 10;
+
+      @mixin atSmall {
+        top: 20px;
+      }
+
+      div {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.7;
+        transition: all 0.5s;
+
+        &:active {
+          transform: scale(0.6);
+        }
+      }
+
+      i {
+        color: gray;
+        font-size: 1.2rem;
+      }
     }
   }
-  #title {
-    width: 220px;
-    height: 120px;
-    position: relative;
-    margin-bottom: 0;
-  }
-  .text {
-    padding-left: 120px;
-  }
-  .text h4 {
-    transform: scale(0.35);
-  }
-  .btn {
-    margin-top: 0;
-  }
-  .content {
-    flex-direction: column;
-    overflow: hidden;
-    transition: 0.9s $backOutEase;
-  }
-  .contentA {
-    top: 100%;
-  }
-  .controls {
-    top: 0;
-  }
-  .text-wrapper {
-    width: 100%;
-  }
-  .glide {
-    width: 100%;
-    padding-left: 120px;
-    padding-top: 40px;
-  }
-  .btn {
-    margin-top: 30px;
-  }
+}
+.contentA {
+  top: 100%;
+}
+
+.glide__slide {
   .slide {
     height: 300px;
     width: 180px;
-  }
-  .slider-image {
-    height: 180px;
-  }
-  .slide p {
-    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 40px;
+    flex-shrink: 0;
+
+    @mixin atMedium {
+      height: 350px;
+      width: 220px;
+    }
+    @mixin atLarge {
+      height: 400px;
+      width: 220px;
+    }
+    @mixin atFull {
+      height: 500px;
+      width: 250px;
+    }
+
+    p {
+      color: white;
+      font-size: 14px;
+
+      @mixin atMedium {
+        font-size: 18px;
+      }
+    }
+
+    .rating {
+      display: flex;
+      width: 60px;
+      padding: 8px 0;
+      justify-content: space-between;
+
+      .circle {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: white;
+        opacity: 0.5;
+      }
+
+      .active {
+        opacity: 1;
+      }
+    }
   }
 
-  .glide__slide--active .slider-image {
-    height: 220px;
+  &--active {
+    .slider-image {
+      height: 250px;
+      z-index: 5;
+
+      @mixin atMedium {
+        height: 400px;
+      }
+    }
+  }
+}
+.slider-image {
+  height: 180px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s;
+  @mixin atSmall {
+  }
+  @mixin atMedium {
+    height: 250px;
+  }
+  @mixin atLarge {
+    height: 280px;
+  }
+  @mixin atFull {
+    height: 300px;
+  }
+  @mixin atFullest {
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
