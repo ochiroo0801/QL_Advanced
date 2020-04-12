@@ -417,6 +417,17 @@
 }
 
 .glide__slide {
+  position: relative;
+
+  @keyframes btn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
   .slide {
     height: 300px;
     width: 180px;
