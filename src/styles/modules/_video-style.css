@@ -1,11 +1,12 @@
-@import "../modules/_video-video.css";
+@import "../modules/_video-videoGallery.css";
 @import "../modules/_video-footer.css";
+@import "../modules/_video-slider.css";
 
 .videoBody {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto auto auto;
   background-image: $Bg_Gradient;
 }
 

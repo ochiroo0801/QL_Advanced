@@ -1,7 +1,7 @@
 /* Footer ********************************************************/
 .footer {
   grid-column: 1 / span 1;
-  grid-row: 3 / span 1;
+  grid-row: 4 / span 1;
   position: relative;
   display: grid;
   grid-template-columns: auto;

@@ -2,7 +2,7 @@
 
 .video-container {
   grid-column: 1 / span 1;
-  grid-row: 2 / span 1;
+  grid-row: 3 / span 1;
   padding: 0px 20px;
   width: 100%;
   position: relative;
@@ -21,10 +21,7 @@
     color: #fab733;
     font-weight: 600;
   }
-  .darkH3 {
-    color: black;
-    border-bottom: 2px solid black;
-  }
+
   .video-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
