@@ -19,7 +19,7 @@
 
 .timeline {
   width: 100%;
-  background-color: rgb(133, 0, 0);
+  background-color: $mainLightGrey;
   box-shadow: 0 5px 25px 5px rgba($mainBlack, 0.2);
 
   .swiper-container {
@@ -114,14 +114,14 @@
     .timeline-title {
       font-weight: 800;
       font-size: 20px;
-      margin: 0 0 30px;
+      margin-bottom: 10px;
       opacity: 0;
       transform: translate3d(20px, 0, 0);
       transition: 0.2s ease 0.5s;
 
       @mixin atMedium {
         font-size: 46px;
-        margin: 0;
+        margin-bottom: 30px;
       }
     }
 
@@ -195,7 +195,7 @@
       text-align: center;
       opacity: 1;
       background: transparent;
-      color: $mainYellow;
+      color: $mainLightGrey;
       margin: 15px 0 !important;
       position: relative;
 
@@ -207,18 +207,21 @@
         width: 6px;
         height: 6px;
         border-radius: 100%;
-        background-color: $mainYellow;
+        background-color: $mainOrange;
         transform: scale(1);
         transition: 0.2s;
 
         @mixin atMedium {
+          width: 25px;
+          height: 4px;
+          border-radius: 0;
           left: -32.5px;
           transform: scale(0);
         }
       }
 
       &-active {
-        color: $mainYellow;
+        color: $mainWhite;
 
         &::before {
           transform: scale(2);
