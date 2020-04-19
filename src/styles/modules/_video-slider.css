@@ -82,7 +82,7 @@
 
       @mixin atMedium {
         right: 30%;
-        top: 50%;
+        top: 60%;
         transform: translateY(-50%);
         width: 310px;
         font-size: 11px;
@@ -98,7 +98,8 @@
       display: block;
       font-style: italic;
       font-size: 42px;
-      margin-bottom: 50px;
+      margin-top: 30px;
+      margin-bottom: 30px;
       transform: translate3d(20px, 0, 0);
       color: $mainYellow;
       font-weight: 300;
@@ -106,8 +107,9 @@
       transition: 0.2s ease 0.4s;
 
       @mixin atMedium {
+        margin-top: 0;
         margin-bottom: 0;
-        font-size: 32px;
+        font-size: 55px;
       }
     }
 
@@ -130,6 +132,7 @@
       opacity: 0;
       transform: translate3d(20px, 0, 0);
       transition: 0.2s ease 0.6s;
+      font-size: 1rem;
     }
 
     &-active {
