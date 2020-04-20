@@ -57,6 +57,10 @@
     height: 60px;
     z-index: 888;
 
+    a {
+      cursor: pointer;
+    }
+
     @mixin atMedium {
       width: 80px;
       height: 80px;
@@ -64,6 +68,10 @@
     img {
       width: 60px;
       height: 60px;
+      transition: transform 0.5s;
+      &:hover {
+        transform: rotate(-25deg);
+      }
 
       @mixin atMedium {
         width: 80px;
@@ -115,6 +123,15 @@
         font-size: 1.5rem;
         letter-spacing: 3px;
         cursor: pointer;
+        padding: 5px 15px;
+        border-radius: 10px;
+        border: 1px solid rgba(0, 0, 0, 0);
+        transition: border 0.5s linear, background 0.5s linear;
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.219);
+          border: 1px solid $mainLightGrey;
+        }
 
         @mixin atMedium {
           font-size: 1rem;
