@@ -2,6 +2,7 @@
   width: 100vw;
   height: 100vh;
   background: $homePageBg;
+  overflow: hidden;
 }
 
 .nav {

@@ -9,21 +9,10 @@ toggle.addEventListener("click", () => {
   toggle.classList.toggle("active");
   nav__container.classList.toggle("change");
 
-  if (null === content) {
-  } else {
-    content.classList.toggle("contentA");
-    indicator.classList.toggle("indicatorA");
-  }
+  null !== content ? content.classList.toggle("contentA") : "";
+  null !== content ? indicator.classList.toggle("indicatorA") : "";
 
-  if (null === chartBody) {
-  } else {
-    chartBody.classList.toggle("chartBodyActive");
-  }
+  null !== chartBody ? chartBody.classList.toggle("chartBodyActive") : "";
 
-  if (null === videoBody) {
-  } else {
-    videoBody.classList.toggle("videoBodyActive");
-  }
+  null !== videoBody ? videoBody.classList.toggle("videoBodyActive") : "";
 });
-
-export default toggle;
