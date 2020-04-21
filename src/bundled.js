@@ -1,6 +1,8 @@
 import "../src/styles/styles.css";
-import toggle from "./scripts/toggle_menu";
-import toTop from "./scripts/toTop";
-import contactPageEvent from "./scripts/contact";
-import swiperSlider from "./scripts/swiper-slider";
-import venobox from "./scripts/venobox";
+import "./scripts/toggle_menu";
+import "./scripts/toTop";
+import "./scripts/contact";
+import "./scripts/library/_chart1";
+import "./scripts/library/_chart2";
+import "./scripts/swiper-slider";
+import "./scripts/venobox";

@@ -1,7 +1,6 @@
 const socialBtn = document.getElementById("social-btn");
 const phoneBtn = document.getElementById("phone-btn");
 const contactContainer = document.querySelector(".contact__container");
-
 const contactPageEvent = () => {
   if (null === socialBtn) {
   } else {

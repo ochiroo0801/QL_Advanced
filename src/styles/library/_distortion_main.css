@@ -99,7 +99,7 @@
       position: relative;
       top: 0;
       background-image: none;
-      width: 500px;
+      width: 580px;
       height: 100%;
     }
 
@@ -127,6 +127,7 @@
         border-radius: 10px;
         border: 1px solid rgba(0, 0, 0, 0);
         transition: border 0.5s linear, background 0.5s linear;
+        margin: 0 3px;
 
         &:hover {
           background: rgba(0, 0, 0, 0.219);
