@@ -2,17 +2,17 @@ import theme from "./_chart_theme";
 
 document.addEventListener("DOMContentLoaded", function () {
   theme();
+
   Highcharts.chart({
     chart: {
       type: "column",
       renderTo: "chart1",
     },
     title: {
-      text: "Browser market shares",
+      text: "Нийтийн дуу",
     },
     subtitle: {
-      text:
-        'Click the columns to view versions. Source: <a href="http://statcounter.com" target="_blank">statcounter.com</a>',
+      text: "Энэ долоо хоногын хамгийн их үзэлэлттэй арван дуу",
     },
     accessibility: {
       announceNewData: {
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     yAxis: {
       title: {
-        text: "Total percent market share",
+        text: "YouTube үзүүлэлт",
       },
     },
     legend: {
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         borderWidth: 0,
         dataLabels: {
           enabled: true,
-          format: "{point.y:.1f}%",
+          format: "{point.y:.f}",
         },
       },
     },
@@ -43,18 +43,18 @@ document.addEventListener("DOMContentLoaded", function () {
     tooltip: {
       headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
       pointFormat:
-        '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>',
+        '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.f}</b> үзэлт<br/>',
     },
 
     series: [
       {
-        name: "Browsers",
+        name: "Нийтийн дуу",
         colorByPoint: true,
         data: [
           {
-            name: "C",
-            y: 62.74,
-            drilldown: "Chrome",
+            name: "Гэрэлчулуун - Эвийн түшигтэй анд",
+            y: 6587008,
+            drilldown: "Гэрэл",
           },
           {
             name: "Firefox",
@@ -175,5 +175,4 @@ document.addEventListener("DOMContentLoaded", function () {
       ],
     },
   });
-  theme2();
 });

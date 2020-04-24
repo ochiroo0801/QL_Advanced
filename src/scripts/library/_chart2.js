@@ -1,18 +1,17 @@
-import theme2 from "./_chart_theme2";
+import theme from "./_chart_theme";
 
 document.addEventListener("DOMContentLoaded", function () {
-  theme2();
+  theme();
   Highcharts.chart({
     chart: {
       type: "column",
       renderTo: "chart2",
     },
     title: {
-      text: "Browser market shares. January, 2018",
+      text: "Поп дуу",
     },
     subtitle: {
-      text:
-        'Click the columns to view versions. Source: <a href="http://statcounter.com" target="_blank">statcounter.com</a>',
+      text: "Энэ долоо хоногын хамгийн их үзэлэлттэй арван дуу",
     },
     accessibility: {
       announceNewData: {
@@ -24,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     yAxis: {
       title: {
-        text: "Total percent market share",
+        text: "YouTube үзүүлэлт",
       },
     },
     legend: {
@@ -35,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         borderWidth: 0,
         dataLabels: {
           enabled: true,
-          format: "{point.y:.1f}%",
+          format: "{point.y:.f}",
         },
       },
     },
@@ -43,37 +42,37 @@ document.addEventListener("DOMContentLoaded", function () {
     tooltip: {
       headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
       pointFormat:
-        '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>',
+        '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.f}</b> үзэлт<br/>',
     },
 
     series: [
       {
-        name: "Browsers",
+        name: "Поп дуу",
         colorByPoint: true,
         data: [
           {
-            name: "Chrome",
-            y: 62.74,
+            name: "Баярцэнгэл - Вансэмбэрүү цэцэг",
+            y: 2524778,
             drilldown: "Chrome",
           },
           {
             name: "Firefox",
-            y: 10.57,
+            y: 3725461,
             drilldown: "Firefox",
           },
           {
             name: "Internet Explorer",
-            y: 7.23,
+            y: 2.23,
             drilldown: "Internet Explorer",
           },
           {
             name: "Safari",
-            y: 5.58,
+            y: 1.58,
             drilldown: "Safari",
           },
           {
             name: "Edge",
-            y: 4.02,
+            y: 3.02,
             drilldown: "Edge",
           },
           {
@@ -83,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
           },
           {
             name: "Other",
-            y: 7.62,
+            y: 3.62,
             drilldown: null,
           },
         ],
