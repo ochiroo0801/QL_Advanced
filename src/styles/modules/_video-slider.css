@@ -168,7 +168,7 @@
   }
 
   .swiper-pagination {
-    right: 17% !important;
+    right: 18% !important;
     top: 90%;
     height: 100%;
     display: flex;
@@ -190,7 +190,7 @@
     }
 
     @mixin atLarge {
-      right: 16% !important;
+      right: 16.7% !important;
     }
 
     &::before {
@@ -257,7 +257,10 @@
     height: 20px;
     margin-top: 0;
     z-index: 2;
-    transition: 0.2s;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    padding: 15px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   .swiper-button-prev {
@@ -270,14 +273,6 @@
       left: auto;
       right: 15%;
       transform: rotate(90deg) translate(0, 10px);
-
-      &:hover {
-        transform: rotate(90deg) translate(-3px, 10px);
-      }
-    }
-
-    &:hover {
-      transform: translateX(-3px);
     }
   }
 
@@ -291,14 +286,6 @@
       bottom: 15%;
       right: 15%;
       transform: rotate(90deg) translate(0, 10px);
-
-      &:hover {
-        transform: rotate(90deg) translate(3px, 10px);
-      }
-    }
-
-    &:hover {
-      transform: translateX(3px);
     }
   }
 }
