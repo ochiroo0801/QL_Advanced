@@ -131,6 +131,11 @@
       transition: 0.2s ease 0.5s;
       text-shadow: 4px 4px 3px $mainBlack;
 
+      @mixin atSmall {
+        font-size: 35px;
+        margin-bottom: 30px;
+      }
+
       @mixin atMedium {
         font-size: 46px;
         margin-bottom: 30px;
