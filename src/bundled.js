@@ -5,3 +5,4 @@ import "./scripts/contact";
 import "./scripts/library/_chart1";
 import "./scripts/library/_chart2";
 import "./scripts/home_slider";
+import "./scripts/library/_video_slide";
