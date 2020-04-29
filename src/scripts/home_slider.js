@@ -21,13 +21,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   autoPlay();
 
-  secStyle();
+  // secStyle();
   pagination();
 
-  function secStyle() {
-    // +5 padding
-    secondStyle.style.width = `${sizeSecond * 3 + 5}px`;
-  }
+  // function secStyle() {
+  //   // +5 padding
+  //   secondStyle.style.width = `${sizeSecond * 3 + 5}px`;
+  // }
 
   function davtalt(e) {
     for (let i = 0; i < sliderBG.length; i++) {

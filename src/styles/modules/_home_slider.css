@@ -6,15 +6,17 @@
 }
 
 .home_slide_arrows {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  margin-left: 20px;
+  width: 150px;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 5;
+
+  @mixin atMedium {
+    width: 200px;
+  }
 
   button {
     padding: 15px;
@@ -24,7 +26,12 @@
     background: $mainWhite;
     cursor: pointer;
     font-size: 1.5rem;
-    opacity: 0.7;
+    opacity: 0.8;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
 
     .fa {
       color: $mainGrey;
@@ -64,15 +71,26 @@
 }
 
 .home__sliderTitle {
-  max-width: 1100px;
-  min-width: 300px;
+  min-width: 250px;
   height: 100px;
+
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 30%;
   z-index: 5;
   overflow: hidden;
   pointer-events: none;
+
+  @mixin atMedium {
+    min-width: 400px;
+  }
+
+  @mixin atFull {
+    height: 140px;
+    top: 50%;
+    left: 15%;
+    min-width: 500px;
+  }
 
   .sliderTitle-container {
     position: absolute;
@@ -86,6 +104,13 @@
       font-size: 30px;
       color: $mainWhite;
 
+      @mixin atMedium {
+        font-size: 40px;
+      }
+      @mixin atFull {
+        font-size: 55px;
+      }
+
       h1 {
         text-shadow: 5px 5px 5px black;
       }
@@ -94,34 +119,63 @@
 }
 
 .home__sliderSecond {
-  height: 550px;
-  top: 40%;
+  height: 330px;
+  width: 70%;
   left: 30%;
+  top: 48%;
   position: absolute;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
   overflow: hidden;
   z-index: 4;
 
+  @mixin atMedium {
+    height: 500px;
+    top: 45%;
+  }
+
+  @mixin atFull {
+    width: 50%;
+    left: 50%;
+  }
+
   .home__second__container {
+    height: 250px;
     display: flex;
     align-items: center;
+    justify-content: center;
+
+    @mixin atMedium {
+      height: 400px;
+    }
 
     img {
-      width: 300px;
-      height: 400px;
-      margin-right: 50px;
+      width: 150px;
+      height: 200px;
+      margin-right: 30px;
       transition: 0.6s ease;
       transform: rotate3d(0, 1, 0, 3.2rad);
       border-radius: 20px;
       box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.336);
 
+      @mixin atMedium {
+        width: 300px;
+        height: 350px;
+        margin-right: 50px;
+      }
+
       &.active {
-        width: 350px;
-        height: 500px;
+        width: 180px;
+        height: 250px;
         transform: rotate3d(0, 0, 0, 0rad);
         box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.336);
+
+        @mixin atMedium {
+          width: 350px;
+          height: 400px;
+        }
       }
     }
   }
@@ -130,7 +184,7 @@
 .home__sliderPagination {
   position: absolute;
   top: 0;
-  left: 10%;
+  left: 5%;
   height: 100%;
   width: 100px;
   z-index: 5;
@@ -138,6 +192,14 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+
+  @mixin atMedium {
+    left: 10%;
+  }
+
+  @mixin atFull {
+    left: 7%;
+  }
 
   .dot {
     line-height: 26px;
