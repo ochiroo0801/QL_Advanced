@@ -944,13 +944,48 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
-
     <!-- Video Сан -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.8.6/venobox.min.js"
       integrity="sha256-vRcA6HQ42C3q7wQlOYINRAMuAPpjAmdORTQ1wv/jwtk="
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".venobox").venobox({
+          closeColor: "#fab733",
+          arrowsColor: "#fab733",
+          spinColor: "#fab733",
+          spinner: "cube-grid",
+        });
+      });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+
+    <script>
+      Swiper(".timeline .swiper-container", {
+        direction: "vertical",
+        loop: false,
+        speed: 1600,
+        pagination: ".swiper-pagination",
+        paginationBulletRender: function (swiper, index, className) {
+          var year = document
+            .querySelectorAll(".swiper-slide")
+            [index].getAttribute("data-year");
+          return '<span class="' + className + '">' + year + "</span>";
+        },
+        paginationClickable: true,
+        nextButton: ".swiper-button-next",
+        prevButton: ".swiper-button-prev",
+        breakpoints: {
+          768: {
+            direction: "horizontal",
+          },
+        },
+        autoplay: 8000,
+      });
+    </script>
   </body>
 </html>

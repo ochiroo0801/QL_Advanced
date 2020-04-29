@@ -4,5 +4,4 @@ import "./scripts/toTop";
 import "./scripts/contact";
 import "./scripts/library/_chart1";
 import "./scripts/library/_chart2";
-import "./scripts/swiper-slider";
-import "./scripts/venobox";
+import "./scripts/home_slider";

@@ -1,9 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="" />
 
     <title>Mr.Quality Lyrics mongolia / Монгол дуу хөгжим /</title>
     <link rel="shortcut icon" type="image/png" href="./img/favicon.png" />
@@ -12,230 +12,101 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.min.css"
-      integrity="sha256-Ev8y2mML/gGa4LFVZgNpMTjKwj34q4pC4DcseWeRb9w="
-      crossorigin="anonymous"
-    />
   </head>
-
-  <body class="body">
-    <section>
-      <nav class="nav">
-        <div class="nav_logo">
-          <a href="index.html"
-            ><img src="./img/Mr.QL_Avatar_dot.png" alt=""
-          /></a>
-        </div>
-        <div class="nav_toggle">
-          <span class="span s1"></span>
-          <span class="span s2"></span>
-          <span class="span s3"></span>
-        </div>
-        <div class="nav__container">
-          <ul class="nav__container--ul">
-            <li><a href="index.html">Нүүр</a></li>
-            <li><a href="video.html">Видео</a></li>
-            <li><a href="chart.html">Чарт</a></li>
-            <li><a href="contact.html">Холбогдох</a></li>
-          </ul>
-          <div class="nav__container--social">
-            <a
-              href="https://www.facebook.com/Mr.QualityLyricsMongolia/"
-              target="blank"
-              ><i class="fab fa-facebook"></i
-            ></a>
-            <a
-              href="https://www.youtube.com/channel/UCDNCaXyaX_ylW4OkdL_vF-Q?sub_confirmation=1"
-              target="blank"
-              ><i class="fab fa-youtube"></i
-            ></a>
-          </div>
-        </div>
-      </nav>
-      <div class="side-indicator">
-        <div class="line"></div>
-        <div class="index one">
-          <p>1</p>
-        </div>
-        <div class="index two">
-          <p>2</p>
-        </div>
-        <div class="index three">
-          <p>3</p>
-        </div>
-        <div class="index four">
-          <p>4</p>
+  <body class="homebody">
+    <nav class="nav">
+      <div class="nav_logo">
+        <a href="index.html"><img src="./img/Mr.QL_Avatar_dot.png" alt="" /></a>
+      </div>
+      <div class="nav_toggle">
+        <span class="span s1"></span>
+        <span class="span s2"></span>
+        <span class="span s3"></span>
+      </div>
+      <div class="nav__container">
+        <ul class="nav__container--ul">
+          <li><a href="index.html">Нүүр</a></li>
+          <li><a href="video.html">Видео</a></li>
+          <li><a href="chart.html">Чарт</a></li>
+          <li><a href="contact.html">Холбогдох</a></li>
+        </ul>
+        <div class="nav__container--social">
+          <a
+            href="https://www.facebook.com/Mr.QualityLyricsMongolia/"
+            target="blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a
+            href="https://www.youtube.com/channel/UCDNCaXyaX_ylW4OkdL_vF-Q?sub_confirmation=1"
+            target="blank"
+            ><i class="fab fa-youtube"></i
+          ></a>
         </div>
       </div>
-      <div class="content">
-        <div class="text-wrapper">
-          <div class="text">
-            <div id="title">
-              <h4>Нийтийн</h4>
-              <h4>Поп</h4>
-              <h4>Трап</h4>
-              <h4>Чарт</h4>
-            </div>
-            <div class="btn">
-              <p>Танилцуулга</p>
-              <i class="fa fa-video"></i>
-            </div>
-          </div>
+    </nav>
+
+    <div class="home_slide_arrows">
+      <button id="prev__btn"><i class="fa fa-arrow-left"></i></button>
+      <button id="next__btn"><i class="fa fa-arrow-right"></i></button>
+    </div>
+    <div class="home_sliderBG">
+      <div
+        class="home__slide active"
+        style="background-image: url('img/Slider_Cover/cover.jpg');"
+      ></div>
+      <div
+        class="home__slide"
+        style="background-image: url('img/Slider_Cover/cover_2.jpg');"
+      ></div>
+      <div
+        class="home__slide"
+        style="background-image: url('img/Slider_Cover/cover.jpg');"
+      ></div>
+      <div
+        class="home__slide"
+        style="background-image: url('img/Thumnails/Aaviin_duunuud.jpg');"
+      ></div>
+    </div>
+
+    <div class="home__sliderTitle">
+      <div class="sliderTitle-container">
+        <div class="content">
+          <h1>Нийтийн</h1>
         </div>
-        <div class="glide">
-          <div class="glide_cover"></div>
-          <div class="glide__track" data-glide-el="track">
-            <ul class="glide__slides">
-              <li class="glide__slide">
-                <div class="slide one">
-                  <p>Нийтийн дуунууд</p>
-                  <div class="rating">
-                    <div class="circle active"></div>
-                    <div class="circle active"></div>
-                    <div class="circle active"></div>
-                    <div class="circle active"></div>
-                    <div class="circle"></div>
-                  </div>
-                  <div class="slider-image">
-                    <img src="img/Slider_Cover/cover.jpg" />
-                  </div>
-                </div>
-              </li>
-              <li class="glide__slide">
-                <div class="slide two">
-                  <p>Поп дуунууд</p>
-                  <div class="rating">
-                    <div class="circle active"></div>
-                    <div class="circle active"></div>
-                    <div class="circle active"></div>
-                    <div class="circle active"></div>
-                    <div class="circle"></div>
-                  </div>
-                  <div class="slider-image">
-                    <img src="img/Slider_Cover/cover_2.jpg" />
-                  </div>
-                </div>
-              </li>
-              <li class="glide__slide">
-                <div class="slide three">
-                  <p>Трап - Хип Хоп</p>
-                  <div class="rating">
-                    <div class="circle active"></div>
-                    <div class="circle active"></div>
-                    <div class="circle active"></div>
-                    <div class="circle active"></div>
-                    <div class="circle"></div>
-                  </div>
-                  <div class="slider-image">
-                    <img src="img/slide3.jpg" />
-                  </div>
-                </div>
-              </li>
-              <li class="glide__slide">
-                <div class="slide four">
-                  <p>Чарт</p>
-                  <div class="rating">
-                    <div class="circle active"></div>
-                    <div class="circle active"></div>
-                    <div class="circle active"></div>
-                    <div class="circle active"></div>
-                    <div class="circle"></div>
-                  </div>
-                  <div class="slider-image">
-                    <img src="img/Slider_Cover/cover_4.png" />
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div data-glide-el="controls" class="controls">
-            <div data-glide-dir="<" id="prev">
-              <i class="fa fa-arrow-left"></i>
-            </div>
-            <div data-glide-dir=">" id="next">
-              <i class="fa fa-arrow-right"></i>
-            </div>
-          </div>
+        <div class="content">
+          <h1>Поп Рок</h1>
+        </div>
+        <div class="content">
+          <h1>Хип Хоп</h1>
+        </div>
+        <div class="content">
+          <h1>Чарт</h1>
         </div>
       </div>
-    </section>
+    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"
-      integrity="sha256-CnNQJd80jPuIDyeQRRq7+Wgt+++Kl0dZLt4ETNmxMIw="
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        new Glide(".glide", {
-          animationDuration: 400,
-          type: "carousel",
-          startAt: 0,
-          animationTimingFunc: "ease-in-out",
-          gap: 100,
-          perView: 3,
-        }).mount();
+    <div class="home__sliderPagination">
+      <div class="dot active">
+        <h6>1</h6>
+      </div>
+      <div class="dot">
+        <h6>2</h6>
+      </div>
+      <div class="dot">
+        <h6>3</h6>
+      </div>
+      <div class="dot">
+        <h6>4</h6>
+      </div>
+    </div>
 
-        let prevBtn = document.getElementById("prev");
-        let nextBtn = document.getElementById("next");
-        let indices = document.querySelectorAll(".index");
-
-        let currentIndex = 0;
-
-        indices.forEach((index) => index.classList.remove("active"));
-        indices[currentIndex].classList.add("active");
-
-        function startNextDistortAnimation() {
-          let prevIndex = currentIndex;
-          currentIndex = (currentIndex + 1) % 4;
-          indices.forEach((index) => index.classList.remove("active"));
-          indices[currentIndex].classList.add("active");
-          showTextAnimation("next");
-        }
-
-        function startPrevDistortAnimation() {
-          currentIndex = currentIndex - 1 < 0 ? 3 : currentIndex - 1;
-          indices.forEach((index) => index.classList.remove("active"));
-          indices[currentIndex].classList.add("active");
-          showTextAnimation("prev");
-        }
-
-        nextBtn.addEventListener("click", () => {
-          startNextDistortAnimation();
-        });
-
-        prevBtn.addEventListener("click", () => {
-          startPrevDistortAnimation();
-        });
-
-        let titleDisplacement = 0;
-        let descriptionDisplacement = 0;
-
-        function showTextAnimation(direction) {
-          if (titleDisplacement === 0 && direction === "prev") {
-            titleDisplacement = -540;
-          } else if (titleDisplacement === -540 && direction === "next") {
-            titleDisplacement = 0;
-          } else {
-            titleDisplacement =
-              direction === "next"
-                ? titleDisplacement - 180
-                : titleDisplacement + 180;
-          }
-
-          let title = document.querySelectorAll("#title h4");
-
-          title.forEach((title) => {
-            TweenMax.to(title, 1, {
-              top: `${titleDisplacement}px`,
-              ease: Strong.easeInOut,
-            });
-          });
-        }
-      });
-    </script>
+    <div class="home__sliderSecond">
+      <div class="home__second__container">
+        <img src="img/Slider_Cover/cover.jpg" alt="" class="active" />
+        <img src="img/Slider_Cover/cover_2.jpg" alt="" />
+        <img src="img/Slider_Cover/cover.jpg" alt="" />
+        <img src="img/Slider_Cover/cover_4.jpg" alt="" />
+      </div>
+    </div>
   </body>
 </html>
