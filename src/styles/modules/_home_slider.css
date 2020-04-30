@@ -151,7 +151,7 @@
       height: 400px;
     }
 
-    img {
+    span {
       width: 150px;
       height: 200px;
       margin-right: 30px;
@@ -159,6 +159,8 @@
       transform: rotate3d(0, 1, 0, 3.2rad);
       border-radius: 20px;
       box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.336);
+      background-size: cover;
+      background-position: center;
 
       @mixin atMedium {
         width: 300px;
