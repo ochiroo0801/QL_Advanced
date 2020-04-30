@@ -1,4 +1,9 @@
 /* Footer ********************************************************/
+
+:root {
+  --mainYellow: #fab733;
+}
+
 .footer {
   grid-column: 1 / span 1;
   grid-row: 4 / span 1;
@@ -45,7 +50,7 @@
 
       p {
         padding-top: 10px;
-        color: $mainYellow;
+        color: var(--mainYellow);
         letter-spacing: 6px;
       }
     }
@@ -79,7 +84,7 @@
       font-weight: 700;
 
       span {
-        color: $mainYellow;
+        color: var(--mainYellow);
       }
     }
 
@@ -113,7 +118,7 @@
       border-radius: 10px;
       outline: none;
       border: none;
-      background: $mainYellow;
+      background: var(--mainYellow);
       text-shadow: 0 0 2px $mainBlack;
     }
   }
@@ -140,7 +145,7 @@
       font-weight: 700;
 
       span {
-        color: $mainYellow;
+        color: var(--mainYellow);
       }
     }
 
@@ -153,7 +158,7 @@
         margin: 5px 0;
 
         i {
-          color: $mainYellow;
+          color: var(--mainYellow);
           padding-right: 10px;
         }
       }
@@ -169,7 +174,7 @@
 
       i {
         font-size: 1.5rem;
-        color: $mainYellow;
+        color: var(--mainYellow);
         margin: 10px 20px;
       }
     }
@@ -202,7 +207,7 @@
       padding-left: 10px;
 
       span {
-        color: $mainYellow;
+        color: var(--mainYellow);
       }
     }
   }

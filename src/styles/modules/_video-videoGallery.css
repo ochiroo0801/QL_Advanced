@@ -1,4 +1,7 @@
 /* Видео сан ****************************************************/
+:root {
+  --mainYellow: #fab733;
+}
 
 .video-container {
   grid-column: 1 / span 1;
@@ -15,10 +18,10 @@
   h3 {
     font-size: 30px;
     margin: 30px 0 10px 0;
-    border-bottom: 2px solid #fab733;
+    border-bottom: 2px solid var(--mainYellow);
     padding: 20px 0px;
     margin-bottom: 20px;
-    color: #fab733;
+    color: var(--mainYellow);
     font-weight: 600;
   }
 
@@ -46,7 +49,7 @@
 
     i {
       font-size: 50px;
-      color: $mainOrange;
+      color: var(--mainYellow);
     }
   }
 
@@ -69,7 +72,7 @@
     position: relative;
 
     &:hover {
-      background: #fab733;
+      background: var(--mainYellow);
       box-shadow: inset 3px 3px 5px #684601;
       color: black;
     }

@@ -1,3 +1,7 @@
+:root {
+  --mainYellow: #fab733;
+}
+
 .bodyContact {
   width: 100vw;
   height: 100vh;
@@ -60,7 +64,7 @@
           color: $mainWhite;
           font-size: 1.5rem;
           margin-bottom: 50px;
-          border-bottom: 1px solid #fab733;
+          border-bottom: 1px solid var(--mainYellow);
           padding-bottom: 15px;
 
           @mixin atSmall {
@@ -78,14 +82,14 @@
             padding: 10px 0;
             i {
               font-size: 1.2rem;
-              color: $mainYellow;
+              color: var(--mainYellow);
               margin-right: 15px;
             }
           }
           a {
             color: $mainWhite;
             i {
-              color: $mainYellow;
+              color: var(--mainYellow);
               font-size: 40px;
               transition: color 0.3s ease;
             }
@@ -111,8 +115,7 @@
 
 button {
   border-radius: 20px;
-  border: 1px solid #fa0004;
-  background: #fa0004;
+  border: 2px solid #fff;
   color: #fff;
   font-size: 12px;
   font-weight: bold;
@@ -177,9 +180,7 @@ button.ghost {
   }
 
   .overlay {
-    background: #fab733;
-    background: linear-gradient(to right, #ff5100, #ff3300) no-repeat 0 0 /
-      cover;
+    background: var(--mainYellow);
     left: 0;
     top: -20%;
     height: 200%;
