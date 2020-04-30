@@ -32,70 +32,33 @@
   }
 
   .video {
-    cursor: pointer;
     height: 180px;
-    line-height: 50px;
-    text-align: center;
-    background: darkcyan;
-    padding: 60px;
-    border: 1px solid #333;
     background: center top/cover;
+    border: 1px solid rgba(0, 0, 0, 0.466);
     border-radius: 5px;
     transition: 0.3s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 
     &:hover {
       transform: scale(1.02);
     }
+    &:hover i {
+      background: rgba(0, 0, 0, 0.336);
+      padding: 260px;
+      color: red;
+    }
 
     i {
+      cursor: pointer;
       font-size: 50px;
       color: var(--mainYellow);
+      text-shadow: 2px 2px 2px black;
+      border-radius: 50%;
+      padding: -50px;
+      transition: color 0.4s ease, padding 0.8s ease-out;
     }
-  }
-
-  .btn {
-    display: none;
-    padding: 10px 30px;
-    border-radius: 20px;
-    border: none;
-    color: black;
-    margin-top: 40px;
-    cursor: pointer;
-    background-color: #e6e6e6;
-    width: 250px;
-    height: 60px;
-    box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.774);
-    position: relative;
-    overflow: hidden;
-    transition: 0.3s linear;
-    outline: none;
-    position: relative;
-
-    &:hover {
-      background: var(--mainYellow);
-      box-shadow: inset 3px 3px 5px #684601;
-      color: black;
-    }
-
-    i {
-      position: absolute;
-      top: 15px;
-      left: 30px;
-      font-size: 2rem;
-      color: #fa0004;
-      text-shadow: 1px 0 2px black;
-    }
-    h6 {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      font-size: 1.2rem;
-      font-weight: 500;
-    }
-  }
-
-  .btnActive {
-    background: black;
-    color: white;
   }
 }
