@@ -246,7 +246,7 @@ button.ghost {
       }
     }
     .overlay-left {
-      transform: translateY(100%);
+      transform: translateY(-80%);
 
       @mixin atMedium {
         transform: translateX(-20%);
@@ -300,7 +300,7 @@ button.ghost {
   }
 }
 .contact__container.right-panel-active .overlay-right {
-  transform: translateY(-100%);
+  transform: translateY(50%);
 
   @mixin atMedium {
     transform: translateX(20%);

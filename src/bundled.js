@@ -12,14 +12,14 @@ import venoBox from "./scripts/library/_venobox";
 document.addEventListener("DOMContentLoaded", function () {
   const body = document.querySelector(".body");
 
+  // HOME ******************************
   if (body.id === "homePage") {
-    console.log("home-page");
     homeSlide();
     toggleMenu();
   }
 
+  // VIDEO *****************************
   if (body.id === "videoPage") {
-    console.log("video-page");
     toggleMenu();
     venoBox();
     videoSlider();
@@ -27,13 +27,13 @@ document.addEventListener("DOMContentLoaded", function () {
     backToTop();
   }
 
+  // CHART *****************************
   if (body.id === "chartPage") {
-    console.log("chart-page");
     toggleMenu();
   }
 
+  // CONTACT ***************************
   if (body.id === "contactPage") {
-    console.log("contact-page");
     toggleMenu();
     colorController();
     contactAnim();
