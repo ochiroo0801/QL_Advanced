@@ -1,7 +1,8 @@
-const socialBtn = document.getElementById("social-btn");
-const phoneBtn = document.getElementById("phone-btn");
-const contactContainer = document.querySelector(".contact__container");
-const contactPageEvent = () => {
+function contactAnim() {
+  const socialBtn = document.getElementById("social-btn");
+  const phoneBtn = document.getElementById("phone-btn");
+  const contactContainer = document.querySelector(".contact__container");
+
   if (null === socialBtn) {
   } else {
     socialBtn.addEventListener("click", () => {
@@ -14,6 +15,6 @@ const contactPageEvent = () => {
       contactContainer.classList.remove("right-panel-active");
     });
   }
-};
+}
 
-contactPageEvent();
+export default contactAnim;

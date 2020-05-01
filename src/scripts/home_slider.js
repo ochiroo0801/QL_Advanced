@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+function homeSlider() {
   const sliderBG = document.querySelector(".home_sliderBG").children;
   const sliderPagination = document.querySelector(".home__sliderPagination")
     .children;
@@ -121,4 +121,6 @@ document.addEventListener("DOMContentLoaded", function () {
   function autoPlay() {
     nextSlide();
   }
-});
+}
+
+export default homeSlider;
