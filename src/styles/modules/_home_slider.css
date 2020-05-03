@@ -1,3 +1,7 @@
+:root {
+  --mainColor: $mainYellow;
+}
+
 .homebody {
   width: 100vw;
   height: 100vh;
@@ -35,6 +39,9 @@
 
     .fa {
       color: $mainGrey;
+    }
+    &:hover .fa {
+      color: var(--mainColor);
     }
   }
 }

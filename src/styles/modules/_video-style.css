@@ -3,7 +3,7 @@
 @import "../modules/_video-slider.css";
 
 :root {
-  --mainYellow: #fab733;
+  --mainColor: $mainYellow;
 }
 
 .videoBody {
@@ -11,7 +11,8 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
-  background-image: $Bg_Gradient;
+  background-image: $videoBG;
+  background-size: 30px 30px;
 }
 
 .videoBodyActive {
@@ -37,7 +38,7 @@
   &::after {
     content: "";
     position: absolute;
-    background-color: var(--mainYellow);
+    background-color: var(--mainColor);
     width: 80px;
     height: 80px;
     z-index: -1;
@@ -49,7 +50,7 @@
     background-color: $mainWhite;
     border-radius: 50%;
     font-size: 1.5rem;
-    color: var(--mainYellow);
+    color: var(--mainColor);
     padding: 14px 16px;
   }
 

@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (body.id === "homePage") {
     homeSlide();
     toggleMenu();
+    colorController();
   }
 
   // VIDEO *****************************

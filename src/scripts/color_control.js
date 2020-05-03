@@ -6,7 +6,7 @@ function colorController() {
 
   color.forEach((swap) => {
     swap.addEventListener("click", (e) => {
-      root.style.setProperty("--mainYellow", e.target.style.background);
+      root.style.setProperty("--mainColor", e.target.style.background);
     });
   });
 

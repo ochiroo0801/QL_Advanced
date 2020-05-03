@@ -1,5 +1,5 @@
 :root {
-  --mainYellow: #fab733;
+  --mainColor: $mainYellow;
 }
 
 .nav {
@@ -19,7 +19,7 @@
     height: 40px;
     z-index: 999;
     border-radius: 5px;
-    border: 1px solid var(--mainYellow);
+    border: 1px solid var(--mainColor);
     padding: 4px;
     background: rgba(175, 186, 211, 0.6);
     cursor: pointer;
@@ -31,7 +31,7 @@
     .span {
       width: 100%;
       height: 6px;
-      background: var(--mainYellow);
+      background: var(--mainColor);
       transition: 0.7s $backOutEase;
 
       &:nth-child(2) {
@@ -94,7 +94,7 @@
     top: -100vh;
     width: 100%;
     height: 100vh;
-    background-image: $Bg_Gradient-2;
+    background-image: $navMobileBG;
     position: absolute;
     transition: top 0.9s $backOutEase;
     z-index: 777;
@@ -181,11 +181,11 @@
         color: $mainGrey;
         font-size: 1.5rem;
         position: relative;
-        transition: top 0.4s ease-in;
+        transition: top 0.4s $backOutEase;
 
         &:hover {
           box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.301);
-          color: var(--mainYellow);
+          color: var(--mainColor);
         }
 
         &::before {
@@ -201,12 +201,12 @@
           height: 50px;
           font-size: 0;
           background: rgba(0, 0, 0, 0.253);
-          transition: background-color 0.3s ease, width 0.4s ease,
+          transition: background-color 0.3s ease, width 0.4s ease-out,
             font-size 0.2s ease-out;
         }
 
         &:hover::before {
-          background-color: var(--mainYellow);
+          background-color: var(--mainColor);
           box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.295);
           width: 150px;
           font-size: 1.5rem;

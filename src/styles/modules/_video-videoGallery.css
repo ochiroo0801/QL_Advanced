@@ -1,6 +1,6 @@
 /* Видео сан ****************************************************/
 :root {
-  --mainYellow: #fab733;
+  --mainColor: $mainYellow;
 }
 
 .video-container {
@@ -18,10 +18,10 @@
   h3 {
     font-size: 30px;
     margin: 30px 0 10px 0;
-    border-bottom: 2px solid var(--mainYellow);
+    border-bottom: 2px solid var(--mainColor);
     padding: 20px 0px;
     margin-bottom: 20px;
-    color: var(--mainYellow);
+    color: var(--mainColor);
     font-weight: 600;
   }
 
@@ -54,7 +54,7 @@
     i {
       cursor: pointer;
       font-size: 50px;
-      color: var(--mainYellow);
+      color: var(--mainColor);
       text-shadow: 2px 2px 2px black;
       border-radius: 50%;
       padding: -50px;

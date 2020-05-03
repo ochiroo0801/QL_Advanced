@@ -1,7 +1,7 @@
 /* Footer ********************************************************/
 
 :root {
-  --mainYellow: #fab733;
+  --mainColor: $mainYellow;
 }
 
 .footer {
@@ -50,7 +50,7 @@
 
       p {
         padding-top: 10px;
-        color: var(--mainYellow);
+        color: var(--mainColor);
         letter-spacing: 6px;
       }
     }
@@ -84,7 +84,7 @@
       font-weight: 700;
 
       span {
-        color: var(--mainYellow);
+        color: var(--mainColor);
       }
     }
 
@@ -118,7 +118,7 @@
       border-radius: 10px;
       outline: none;
       border: none;
-      background: var(--mainYellow);
+      background: var(--mainColor);
       text-shadow: 0 0 2px $mainBlack;
     }
   }
@@ -145,7 +145,7 @@
       font-weight: 700;
 
       span {
-        color: var(--mainYellow);
+        color: var(--mainColor);
       }
     }
 
@@ -158,7 +158,7 @@
         margin: 5px 0;
 
         i {
-          color: var(--mainYellow);
+          color: var(--mainColor);
           padding-right: 10px;
         }
       }
@@ -174,7 +174,7 @@
 
       i {
         font-size: 1.5rem;
-        color: var(--mainYellow);
+        color: var(--mainColor);
         margin: 10px 20px;
       }
     }
@@ -207,7 +207,7 @@
       padding-left: 10px;
 
       span {
-        color: var(--mainYellow);
+        color: var(--mainColor);
       }
     }
   }

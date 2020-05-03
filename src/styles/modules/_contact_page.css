@@ -1,11 +1,12 @@
 :root {
-  --mainYellow: #fab733;
+  --mainColor: $mainYellow;
 }
 
 .contactBody {
   width: 100vw;
   height: 100vh;
-  background: $homePageBg;
+  background: $contactBG;
+
   overflow: hidden;
 }
 
@@ -50,7 +51,8 @@
       }
 
       form {
-        background: $Bg_Gradient;
+        background: $videoBG;
+        background-size: 30px 30px;
         display: flex;
         flex-direction: column;
         padding: 0 50px;
@@ -64,7 +66,7 @@
           color: $mainWhite;
           font-size: 1.5rem;
           margin-bottom: 50px;
-          border-bottom: 1px solid var(--mainYellow);
+          border-bottom: 1px solid var(--mainColor);
           padding-bottom: 15px;
 
           @mixin atSmall {
@@ -82,14 +84,14 @@
             padding: 10px 0;
             i {
               font-size: 1.2rem;
-              color: var(--mainYellow);
+              color: var(--mainColor);
               margin-right: 15px;
             }
           }
           a {
             color: $mainWhite;
             i {
-              color: var(--mainYellow);
+              color: var(--mainColor);
               font-size: 40px;
               transition: color 0.3s ease;
             }
@@ -180,7 +182,7 @@ button.ghost {
   }
 
   .overlay {
-    background: var(--mainYellow);
+    background: var(--mainColor);
     left: 0;
     top: -20%;
     height: 200%;

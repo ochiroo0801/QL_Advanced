@@ -5,74 +5,16 @@ $mainLightGrey: #afbad3;
 $mainBlack: #030303;
 $mainWhite: #fff;
 $backOutEase: cubic-bezier(0.68, -0.55, 0.27, 1.55);
-$Bg_Gradient: linear-gradient(
-    116deg,
-    rgba(232, 232, 232, 0.03) 0%,
-    rgba(232, 232, 232, 0.03) 10%,
-    rgba(14, 14, 14, 0.03) 10%,
-    rgba(14, 14, 14, 0.03) 66%,
-    rgba(232, 232, 232, 0.03) 66%,
-    rgba(232, 232, 232, 0.03) 72%,
-    rgba(44, 44, 44, 0.03) 72%,
-    rgba(44, 44, 44, 0.03) 81%,
-    rgba(51, 51, 51, 0.03) 81%,
-    rgba(51, 51, 51, 0.03) 100%
+$videoBG: linear-gradient(
+    135deg,
+    rgba(107, 107, 107, 0.06) 0%,
+    rgba(107, 107, 107, 0.06) 50%,
+    rgba(202, 202, 202, 0.06) 50%,
+    rgba(202, 202, 202, 0.06) 100%
   ),
-  linear-gradient(
-    109deg,
-    rgba(155, 155, 155, 0.03) 0%,
-    rgba(155, 155, 155, 0.03) 23%,
-    rgba(30, 30, 30, 0.03) 23%,
-    rgba(30, 30, 30, 0.03) 63%,
-    rgba(124, 124, 124, 0.03) 63%,
-    rgba(124, 124, 124, 0.03) 73%,
-    rgba(195, 195, 195, 0.03) 73%,
-    rgba(195, 195, 195, 0.03) 84%,
-    rgba(187, 187, 187, 0.03) 84%,
-    rgba(187, 187, 187, 0.03) 100%
-  ),
-  linear-gradient(
-    79deg,
-    rgba(254, 254, 254, 0.03) 0%,
-    rgba(254, 254, 254, 0.03) 27%,
-    rgba(180, 180, 180, 0.03) 27%,
-    rgba(180, 180, 180, 0.03) 33%,
-    rgba(167, 167, 167, 0.03) 33%,
-    rgba(167, 167, 167, 0.03) 34%,
-    rgba(68, 68, 68, 0.03) 34%,
-    rgba(68, 68, 68, 0.03) 63%,
-    rgba(171, 171, 171, 0.03) 63%,
-    rgba(171, 171, 171, 0.03) 100%
-  ),
-  linear-gradient(
-    109deg,
-    rgba(71, 71, 71, 0.03) 0%,
-    rgba(71, 71, 71, 0.03) 3%,
-    rgba(97, 97, 97, 0.03) 3%,
-    rgba(97, 97, 97, 0.03) 40%,
-    rgba(40, 40, 40, 0.03) 40%,
-    rgba(40, 40, 40, 0.03) 55%,
-    rgba(5, 5, 5, 0.03) 55%,
-    rgba(5, 5, 5, 0.03) 73%,
-    rgba(242, 242, 242, 0.03) 73%,
-    rgba(242, 242, 242, 0.03) 100%
-  ),
-  linear-gradient(
-    271deg,
-    rgba(70, 70, 70, 0.03) 0%,
-    rgba(70, 70, 70, 0.03) 11%,
-    rgba(178, 178, 178, 0.03) 11%,
-    rgba(178, 178, 178, 0.03) 23%,
-    rgba(28, 28, 28, 0.03) 23%,
-    rgba(28, 28, 28, 0.03) 72%,
-    rgba(152, 152, 152, 0.03) 72%,
-    rgba(152, 152, 152, 0.03) 86%,
-    rgba(43, 43, 43, 0.03) 86%,
-    rgba(43, 43, 43, 0.03) 100%
-  ),
-  linear-gradient(90deg, rgb(27, 27, 27), rgb(1, 1, 1));
+  linear-gradient(90deg, rgb(20, 20, 20), rgb(20, 20, 20));
 
-$Bg_Gradient-2: linear-gradient(
+$navMobileBG: linear-gradient(
     10deg,
     rgba(134, 134, 134, 0.05) 0%,
     rgba(134, 134, 134, 0.05) 33.333%,
@@ -119,7 +61,7 @@ $Bg_Gradient-2: linear-gradient(
   ),
   linear-gradient(90deg, rgb(227, 5, 98), rgb(215, 148, 27));
 
-$homePageBg: linear-gradient(
+$contactBG: linear-gradient(
     131deg,
     rgba(186, 186, 186, 0.01) 0%,
     rgba(186, 186, 186, 0.01) 16.667%,
@@ -215,30 +157,3 @@ $homePageBg: linear-gradient(
     rgba(120, 120, 120, 0.03) 100%
   ),
   linear-gradient(90deg, rgb(225, 15, 180), rgb(78, 198, 243));
-
-$chartBg: repeating-radial-gradient(
-    circle at center center,
-    transparent 0px,
-    transparent 11px,
-    rgba(255, 255, 255, 0.04) 11px,
-    rgba(255, 255, 255, 0.04) 19px,
-    transparent 19px,
-    transparent 29px,
-    rgba(255, 255, 255, 0.04) 29px,
-    rgba(255, 255, 255, 0.04) 33px
-  ),
-  repeating-radial-gradient(
-    circle at center center,
-    rgb(0, 0, 0) 0px,
-    rgb(0, 0, 0) 5px,
-    rgb(0, 0, 0) 5px,
-    rgb(0, 0, 0) 17px,
-    rgb(0, 0, 0) 17px,
-    rgb(0, 0, 0) 30px,
-    rgb(0, 0, 0) 30px,
-    rgb(0, 0, 0) 43px,
-    rgb(0, 0, 0) 43px,
-    rgb(0, 0, 0) 45px,
-    rgb(0, 0, 0) 45px,
-    rgb(0, 0, 0) 47px
-  );

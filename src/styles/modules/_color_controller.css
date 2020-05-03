@@ -1,5 +1,3 @@
-/* Color Controler */
-
 .color__control {
   position: fixed;
   top: 20%;
@@ -20,11 +18,11 @@
 
   .colorText {
     position: absolute;
-    color: var(--mainYellow);
+    color: var(--mainColor);
     top: 0;
     left: 10px;
     padding-bottom: 3px;
-    border-bottom: 1px solid var(--mainYellow);
+    border-bottom: 1px solid var(--mainColor);
   }
 
   #geer {
@@ -41,7 +39,7 @@
     cursor: pointer;
 
     i {
-      color: var(--mainYellow);
+      color: var(--mainColor);
       font-size: 1.5rem;
     }
   }
