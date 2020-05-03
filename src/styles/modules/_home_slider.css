@@ -148,13 +148,13 @@
   }
 
   .home__second__container {
-    height: 250px;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
 
     @mixin atMedium {
-      height: 400px;
+      height: 420px;
     }
 
     span {
@@ -180,9 +180,17 @@
         transform: rotate3d(0, 0, 0, 0rad);
         box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.336);
 
+        &:hover {
+          height: 260px;
+        }
+
         @mixin atMedium {
           width: 350px;
           height: 400px;
+
+          &:hover {
+            height: 420px;
+          }
         }
       }
     }
