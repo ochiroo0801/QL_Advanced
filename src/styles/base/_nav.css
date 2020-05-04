@@ -82,7 +82,7 @@
     }
   }
   .change {
-    left: 0;
+    top: 0;
   }
 
   &__container {
@@ -90,13 +90,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    top: 0;
-    left: -100%;
+    top: -100vh;
     width: 100%;
     height: 100vh;
     background-image: $navMobileBG;
     position: absolute;
-    transition: left 0.5s $backOutEase;
+    transition: top 0.9s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     z-index: 777;
 
     @mixin atMedium {
