@@ -2,7 +2,7 @@
   --mainColor: $mainYellow;
 }
 
-.nav {
+#nav {
   position: absolute;
   display: flex;
   width: 100%;
@@ -37,9 +37,6 @@
       &:nth-child(2) {
         width: 85%;
       }
-      &:nth-child(3) {
-        width: 70%;
-      }
     }
   }
 
@@ -54,7 +51,6 @@
     }
     .s3 {
       transform: rotate(405deg) translate(-8px, -9px);
-      width: 100%;
     }
   }
 
@@ -84,6 +80,9 @@
         height: 80px;
       }
     }
+  }
+  .change {
+    top: 0;
   }
 
   &__container {
@@ -249,8 +248,5 @@
         }
       }
     }
-  }
-  .change {
-    top: 0;
   }
 }

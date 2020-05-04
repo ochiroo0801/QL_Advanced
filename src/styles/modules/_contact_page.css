@@ -2,11 +2,10 @@
   --mainColor: $mainYellow;
 }
 
-.contactBody {
+#contactPage {
   width: 100vw;
   height: 100vh;
   background: $contactBG;
-
   overflow: hidden;
 }
 
