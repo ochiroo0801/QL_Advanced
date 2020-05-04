@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (body.id === "homePage") {
     homeSlide();
     toggleMenu();
+    colorController();
   }
 
   // VIDEO *****************************
@@ -21,14 +22,14 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleMenu();
     venoBox();
     videoSlider();
-
+    colorController();
     backToTop();
   }
 
   // CONTACT ***************************
   if (body.id === "contactPage") {
     toggleMenu();
-
+    colorController();
     contactAnim();
   }
 });
