@@ -32,7 +32,7 @@
       width: 100%;
       height: 6px;
       background: var(--mainColor);
-      transition: 0.7s $backOutEase;
+      transition: 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 
       &:nth-child(2) {
         width: 85%;
@@ -95,7 +95,7 @@
     height: 100vh;
     background-image: $navMobileBG;
     position: absolute;
-    transition: top 0.9s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transition: top 0.5s ease-in-out;
     z-index: 777;
 
     @mixin atMedium {
@@ -180,7 +180,7 @@
         color: $mainGrey;
         font-size: 1.5rem;
         position: relative;
-        transition: top 0.4s $backOutEase;
+        transition: top 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 
         &:hover {
           box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.301);

@@ -4,7 +4,6 @@ $mainGrey: #797979;
 $mainLightGrey: #afbad3;
 $mainBlack: #030303;
 $mainWhite: #fff;
-$backOutEase: cubic-bezier(0.68, -0.55, 0.27, 1.55);
 $videoBG: linear-gradient(
     135deg,
     rgba(107, 107, 107, 0.06) 0%,
