@@ -9,17 +9,16 @@ import venoBox from "./scripts/library/_venobox";
 
 document.addEventListener("DOMContentLoaded", function () {
   const body = document.querySelector(".body");
+  toggleMenu();
 
   // HOME ******************************
   if (body.id === "homePage") {
     homeSlide();
-    toggleMenu();
     colorController();
   }
 
   // VIDEO *****************************
   if (body.id === "videoPage") {
-    toggleMenu();
     venoBox();
     videoSlider();
     colorController();
@@ -28,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // CONTACT ***************************
   if (body.id === "contactPage") {
-    toggleMenu();
     colorController();
     contactAnim();
   }
