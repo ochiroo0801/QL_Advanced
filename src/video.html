@@ -851,20 +851,34 @@
           <p>Албан ёсны вэбсайт</p>
         </div>
       </div>
-      <div class="footer-message">
+
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        class="footer-message"
+        data-netlify-recaptcha="true"
+      >
         <h3>Санал <span>хүсэлт</span> илгээх</h3>
         <div class="messege">
-          <input type="name" placeholder="Та нэрээ оруулна уу..." id="name" />
+          <input
+            type="name"
+            placeholder="Та нэрээ оруулна уу..."
+            id="name"
+            name="name"
+          />
           <textarea
-            name="text"
+            name="messege"
             id="messege"
             cols="30"
             rows="10"
             placeholder="Санал хүсэлтээ бичнэ үү..."
           ></textarea>
         </div>
-        <button>Илгээх</button>
-      </div>
+        <div data-netlify-recaptcha="true"></div>
+        <button type="submit">Илгээх</button>
+      </form>
+
       <div class="footer-contact">
         <h3>Бидэнтэй <span>Холбогдох</span></h3>
         <div class="utas">

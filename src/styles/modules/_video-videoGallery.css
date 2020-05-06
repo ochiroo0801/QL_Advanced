@@ -41,9 +41,13 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    box-shadow: 0px 0px 8px 4px #272727, 0px 0px 0px 1px #ffffff,
+      inset 0px 0px 5px 3px #000000, inset 0px 0px 0px 1px #ffffff;
 
     &:hover {
       transform: scale(1.02);
+      box-shadow: 0px 0px 0px 0px #3d3d3d, 0px 0px 0px 1px #ffffff,
+        inset 0px 0px 5px 3px #8b8b8b, inset 0px 0px 0px 1px #ffffff;
     }
     &:hover i {
       background: rgba(0, 0, 0, 0.336);
